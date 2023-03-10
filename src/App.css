@@ -1,0 +1,58 @@
+.example-2 {
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "aside content ad"
+    "footer footer ad";
+    grid-template-columns: 25fr 60fr 15fr;
+    width: 100%;
+    height: 100vh;
+    gap: 15px;
+}
+.example-2 div {
+  background-color: #cccccc;
+  padding: 10px;
+  border-radius: 6px;
+}
+.example-2 .header {
+  grid-area: header;
+}
+.example-2 .aside {
+  grid-area: aside;
+}
+.example-2 .content {
+  grid-area: content;
+}
+.example-2 .footer {
+  grid-area: footer;
+}
+.example-2 .ad {
+  grid-area: ad;
+}
+
+
+.example-1 {
+  margin: 20px auto;
+  width: 70%;
+  display: grid;
+  /* grid-template-columns: 1fr 2fr 3fr 2fr 6%; */
+  /* grid-template-columns: repeat(auto-fit, minmax(15px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(3, 200px 300px 20vh);
+  gap: 15px;
+}
+.example-1 .cell {
+  background-color: #777775;
+  min-height: 200px;
+  height: auto;
+}
+/* .example-1 .cell.box-2 {
+  background-color: #00cc88;
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 2;
+} */
+
+.example-1 .cell.box-3 {
+  background-color: #2255cc;  
+  grid-area: span 2 / span 3;  
+}
